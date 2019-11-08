@@ -4,10 +4,12 @@ import { AppService } from './app.service';
 import { BooksModule } from './books/books.module';
 import { BooksController } from './books/books.controller';
 import { BooksService } from './books/books.service';
+import { InMemoryDBModule } from '@nestjs-addons/in-memory-db';
 
 @Module({
   imports: [
     BooksModule,
+    InMemoryDBModule
   ],
   controllers: [
     AppController,

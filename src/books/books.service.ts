@@ -1,7 +1,7 @@
 import { Injectable, HttpException } from '@nestjs/common';
 import { BOOKS } from './books.mock';
-import * as fs from 'fs';
-import * as path from 'path';
+
+
 
 @Injectable()
 export class BooksService {
@@ -31,20 +31,10 @@ export class BooksService {
 
 
     addBook(book): Promise<any> {
-         return new Promise(resolve => {
-            fs.open(path.join(__dirname,'./books.mock.js'),'r', (err,fd) => {
-                if (err){
-                    console.log(err);
-                } else {
-                    console.log(fd);
-                }
-            }
-            );
-        });
-       /* return new Promise(resolve => {
+        return new Promise(resolve => {
             this.books.push(book);
             resolve(this.books);
-        });*/
+        });
     }
 
     removeBook(bookID): Promise<any> {
