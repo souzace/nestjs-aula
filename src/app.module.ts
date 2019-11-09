@@ -3,7 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { BooksModule } from './books/books.module';
 import { BooksController } from './books/books.controller';
-import { BooksService } from './books/books.service';
+
 import { InMemoryDBModule } from '@nestjs-addons/in-memory-db';
 
 @Module({
@@ -17,7 +17,6 @@ import { InMemoryDBModule } from '@nestjs-addons/in-memory-db';
   ],
   providers: [
     AppService,
-    BooksService
   ],
 })
 export class AppModule {}
